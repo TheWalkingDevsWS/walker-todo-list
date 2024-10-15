@@ -35,7 +35,8 @@ walker-todo-list/
 │   └── main.jsx
 ├── .gitignore
 ├── package.json
-└── README.md
+├── README.md
+└── ...
 ```
 
 ## Bileşenlere Genel Bakış
