@@ -5,11 +5,17 @@ import ToDoList from './components/ToDoList';
 function App() {
   const [tasks, setTasks] = useState([]);
 
-  const addTask = (text) => { };
+  const addTask = (text) => {
+    // Bu kısımda yeni bir görev eklemeniz gerekecek
+  };
 
-  const deleteTask = (id) => { };
+  const deleteTask = (id) => {
+    // Bu kısımda görevi silmeniz gerekecek
+  };
 
-  const toggleComplete = (id) => { };
+  const toggleComplete = (id) => {
+    // Bu kısımda görevin durumunu değiştirmeniz gerekecek
+  };
 
   return (
     <div className="max-w-md mx-auto mt-10 p-4 border rounded">

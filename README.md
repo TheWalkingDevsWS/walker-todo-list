@@ -9,8 +9,8 @@ Bu proje, hızlı bir geliştirme deneyimi ve modern stil araçları sağlamak i
 1. **Repoyu Klonlayın**
 
    ```sh
-   git clone <your-git-repo-link>
-   cd beginner-todo-list
+   git clone https://github.com/TheWalkingDevsWS/walker-todo-list
+   cd walker-todo-list
    npm install
    ```
 
@@ -23,7 +23,7 @@ Bu proje, hızlı bir geliştirme deneyimi ve modern stil araçları sağlamak i
 ## Proje Yapısı
 
 ```
-beginner-todo-list/
+walker-todo-list/
 ├── public/
 ├── src/
 │   ├── components/
