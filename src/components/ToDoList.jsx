@@ -7,7 +7,8 @@ const ToDoList = ({ tasks, onDeleteTask, onToggleComplete }) => {
                 <ToDoItem
                     key={task.id}
                     task={task}
-                /*Bu kısımda prop göndermeniz gerekecek*/
+                    onToggleComplete={onToggleComplete}
+                    onTaskDelete={onDeleteTask}
                 />
             ))}
         </div>
