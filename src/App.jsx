@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
 import ToDoInput from './components/ToDoInput';
 import ToDoList from './components/ToDoList';
 import { v4 as uuidv4 } from 'uuid';
+import useLocalStorage from './hooks/useLocalStorage';
 
 
 function App() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useLocalStorage('tasklarim', []);
 
   const addTask = (text) => {
     setTasks([
@@ -28,17 +28,17 @@ function App() {
     ))
   };
 
-  useEffect(
-    () => { console.log(tasks); },
-    [tasks]
-  );
-
+  const taskEdit = (id, text) => {
+    setTasks(tasks.map(task =>
+      task.id === id ? { ...task, text } : task
+    ))
+  };
 
   return (
     <div className="max-w-md mx-auto mt-10 p-4 border rounded">
       <h1 className="text-2xl font-bold mb-4 text-center">To-Do Listesi</h1>
       <ToDoInput onAddTask={addTask} />
-      <ToDoList tasks={tasks} onToggleComplete={toggleComplete} onDeleteTask={deleteTask} />
+      <ToDoList tasks={tasks} onToggleComplete={toggleComplete} onDeleteTask={deleteTask} onTaskEdit={taskEdit} />
     </div>
   );
 }

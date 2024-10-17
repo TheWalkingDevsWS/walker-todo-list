@@ -1,6 +1,6 @@
 import ToDoItem from './ToDoItem';
 
-const ToDoList = ({ tasks, onDeleteTask, onToggleComplete }) => {
+const ToDoList = ({ tasks, onDeleteTask, onToggleComplete, onTaskEdit }) => {
     return (
         <div>
             {tasks.map((task) => (
@@ -9,6 +9,7 @@ const ToDoList = ({ tasks, onDeleteTask, onToggleComplete }) => {
                     task={task}
                     onToggleComplete={onToggleComplete}
                     onTaskDelete={onDeleteTask}
+                    onTaskEdit={onTaskEdit}
                 />
             ))}
         </div>
